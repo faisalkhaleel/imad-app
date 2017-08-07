@@ -93,13 +93,6 @@ app.get('/;articleName', function (req, res) {
     res.send(createTemplate(articles(articleName))); // sendFile now changed to res.send by using object
 });
 
-app.get('/article-two', function (req, res) {
-    res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
-});
-
-app.get('/article-three', function (req, res) {
-    res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
-});
 
 
 
