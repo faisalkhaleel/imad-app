@@ -25,7 +25,7 @@ var articles = {
     },
     'article-two' :{
     title: 'Article Two | Faisal Khaleel',
-    heading: 'Article One',
+    heading: 'Article Two',
     date: 'Aug 5, 2017',
     content: `
     <p>
@@ -34,7 +34,7 @@ var articles = {
     },
     'article-three':{
         title: 'Article Three | Faisal Khaleel',
-    heading: 'Article One',
+    heading: 'Article Three',
     date: 'Aug 6, 2017',
     content: `
     <p>
