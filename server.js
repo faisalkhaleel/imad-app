@@ -94,7 +94,7 @@ app.get('/:articleName', function (req, res) {
     //articleName==article-one
     //articles[articleName] --{} Object content for article
     var articleName = req.params.articleName;
-    res.send(createTemplate(articles[articleName])); // sendFile //now changed to res.send by using object
+    res.send(createTemplate(articles[articleName])); `sendFile now changed to res.send by using object`
 });
 
 
