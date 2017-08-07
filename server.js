@@ -84,7 +84,7 @@ return htmlTemplate;
 var counter = 0;
 app.get('/',function(req,res){
     counter = counter +1;
-    res.send(counter.toString()); // we can send string as a //response not a number, so we convert counter to string
+    res.send(counter.toString());
 });
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
