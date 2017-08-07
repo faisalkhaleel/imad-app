@@ -49,7 +49,6 @@ function createTemplate (data) {
     var date = data.date;
     var heading = data.heading;
     var content = data.content;
-    
 var htmlTemplate= `<html>
     <head>
         <title>
@@ -58,7 +57,6 @@ var htmlTemplate= `<html>
         <meta name="viewport" content="width=device-width,initial-scale=1"/>
         <link href="/ui/style.css" rel="stylesheet" />
     </head>
-    
     <body>
         <div class='container'>
         <div>
@@ -94,9 +92,7 @@ app.get('/:articleName', function (req, res) {
     //articleName==article-one
     //articles[articleName] --{} Object content for article
     var articleName = req.params.articleName;
-    
     res.send(createTemplate(articles[articleName])); 
-    //sendFile now changed to res.send by using object
 });
 
 
