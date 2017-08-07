@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 
 
 var articleName = { 
-    'article-one' : {
+    article-one: {
     title: 'Article One | Faisal Khaleel',
     heading: 'Article One',
     date: 'Aug 4, 2017',
@@ -23,7 +23,7 @@ var articleName = {
           </p>`
         
     },
-    'article-two' :{title: 'Article Two | Faisal Khaleel',
+    article-two :{title: 'Article Two | Faisal Khaleel',
     heading: 'Article One',
     date: 'Aug 4, 2017',
     content: `
@@ -31,7 +31,7 @@ var articleName = {
             This is the content(s) for my Second article. 
           </p>`
     },
-    'article-three':{
+    article-three:{
         title: 'Article Three | Faisal Khaleel',
     heading: 'Article One',
     date: 'Aug 4, 2017',
@@ -88,11 +88,18 @@ app.get('/', function (req, res) {
 
 app.get('/;articleName', function (req, res) {
     //articleName==article-one
-    //articles[articlName] --{} Object content for article one
+    //articles[articlName] --{} Object content for article
     var articleName = req.params.articleName;
-    res.send(createTemplate(articles(articleName))); 
+    res.send(createTemplate(articles(articleName))); // sendFile now changed to res.send by using object
 });
 
+app.get('/article-two', function (req, res) {
+    res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
+});
+
+app.get('/article-three', function (req, res) {
+    res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
+});
 
 
 
