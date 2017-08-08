@@ -1,7 +1,12 @@
 // Counter code
 var button = document.getElementById('counter');
-
+var counter = 0;
 button.onclick = function () {
+    counter = counter + 1;
+    var span = document.getElementById('count');
+              span.innerHTML = counter.toString();
+          };
+    `
     
     // Create a request object-- XMLhttpRequest()
     var request = new XMLHttpRequest();
@@ -23,3 +28,4 @@ button.onclick = function () {
     request.open('GET', 'http://faisalkhaleel.imad.hasura-app.io/counter', true);
     request.send(null);
     };
+    `;
