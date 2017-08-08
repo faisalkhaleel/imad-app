@@ -20,6 +20,6 @@ button.onclick = function () {
     };
     
     // Make the request
-    request.open('GET', 'http://faisalkhaleel.imaad.hasura-app.io/counter', true);
+    request.open('GET', 'http://faisalkhaleel.imad.hasura-app.io/counter', true);
     request.send(null);
     };
